@@ -86,3 +86,26 @@ a:nth-of-type(12) {
   background-color: #3EA367;
 }
 
+/* DEVELOPMENT */
+
+.omhoog {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 0 var(--highlight-primary);
+
+  &:hover {
+    box-shadow: 0 10px 0 var(--primary);
+  }
+
+}
+
+.omlaag {
+  transform: translateY(0px);
+  /* box-shadow: 0 -10px 0 var(--highlight-primary); */
+  background-color: var(--highlight-secondary);
+  color: #050840 !important;
+
+  &:hover {
+    border-color: var(--highlight-secondary);
+  }
+}
+
