@@ -47,6 +47,34 @@ function groter() {
 }
 
 
+//MOUSEOVER
 
+let and = document.querySelector('a:nth-of-type(3)')
+
+and.addEventListener("mouseover", hovered, false);
+and.addEventListener("mouseout", hoveredOut, false);
+and.addEventListener('click', defaultScale)
+
+function random2(number) {
+  return Math.floor(Math.random() * 10)+ 1;
+}
+
+function randomScale() {
+  return `${random2(5)}`;
+}
+
+function hovered() {
+  console.log("Hovered!");
+  this.style.scale = randomScale();
+}
+
+function hoveredOut() {
+  console.log("Hovered Away!");
+  this.style.scale = 1;
+}
+
+function defaultScale() {
+  this.style.scale = 1;
+}
 
 
