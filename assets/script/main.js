@@ -7,6 +7,8 @@ function jumpHandler() {
   interaction.classList.toggle('jump')
 }
 
+
+// BACKGROUND COLOR VERANDEREN VAN BODY - CLICK
 let frontend = document.querySelector('a:nth-of-type(1)')
 let body = document.querySelector('body')
 
@@ -24,3 +26,27 @@ function bgcolor() {
     console.log("frontend_schrijf")
   }
 }
+
+
+//RANDOM ROTATE - CLICK
+let design = document.querySelector('a:nth-of-type(2)')
+
+design.addEventListener('click', groter)
+
+function random(number) {
+  return Math.floor(Math.random() * number);
+}
+
+function randomDeg() {
+  return `${random(360)}deg`;
+}
+
+function groter() {
+  this.style.rotate = randomDeg();
+  console.log(randomDeg())
+}
+
+
+
+
+
