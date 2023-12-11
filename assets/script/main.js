@@ -98,3 +98,31 @@ function mouseClicked() { //wanneer je hem heb geklikt
     count += 1; // er komt steeds 1 bij
     this.innerHTML = "Development: " + count; // de count wordt opgeroepen in de html
 }
+
+// ON MOUSE MOVE + KEYDOWN
+let sprint5 = document.querySelector('a:nth-of-type(5)')
+
+sprint5.addEventListener("click", moveWithMouse, false); // wanneer de sprint 5 button is ingeklikt volgd de button de muis
+
+window.onmousemove = function (e) { // voor het volgen van de muis op de pagina
+  var x = e.pageX,
+      y = e.pageY;
+  sprint5.style.top = (y) + 'px';
+  sprint5.style.left = (x) + 'px';
+};
+
+function moveWithMouse() {
+  this.classList.add('absolute');
+  this.innerHTML = "undo met X";
+  console.log('hi')
+}
+
+addEventListener("keydown", keydown)
+
+function keydown(event){
+  if (event.keyCode === 88) { // 88 is de x key
+    sprint5.classList.remove('absolute');
+    sprint5.innerHTML = "Sprint 5";
+    console.log('88')
+	}
+}
