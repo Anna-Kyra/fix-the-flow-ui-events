@@ -122,3 +122,15 @@ a:nth-of-type(12) {
   scale: 0;
   background-color: var(--primary);
 }
+
+  /* FOCUS & BLUR */
+
+  .focus-the {
+    background-color: var(--highlight-secondary);
+    color: var(--secondary);
+  }
+
+  .blur-the {
+    background-color: var(--highlight-primary);
+    color: var(--secondary);
+  }

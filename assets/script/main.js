@@ -136,3 +136,24 @@ function dblclick(){
   this.classList.add('blur')
 }
 
+// FOCUS
+let the = document.querySelector('a:nth-of-type(7)')
+
+the.addEventListener('focus', focusThe)
+the.addEventListener('blur', blurThe)
+
+function focusThe(){
+  console.log('is gefocused')
+  this.classList.toggle('focus-the')
+}
+
+function blurThe(){
+  console.log('is gefocused')
+  // this.style.background = "#7ce7c9";
+  // this.style.color = "#050840";
+  this.classList.toggle('blur-the')
+}
+
+
+
+
