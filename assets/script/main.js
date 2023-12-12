@@ -154,6 +154,44 @@ function blurThe(){
   this.classList.toggle('blur-the')
 }
 
+// RICKROLLED 
+let flow = document.querySelector('a:nth-of-type(8)')
+let rickrolled = document.querySelector('.rickrolled')
+
+ // wanneer de sprint 5 button is ingeklikt volgd de button de muis
+flow.addEventListener("mousemove", hoveredFlow, false);
+// flow.addEventListener("mouseout", hoveredOutFlow, false);
+
+window.onmousemove = function (e) { // voor het volgen van de muis op de pagina
+  var x = e.pageX,
+      y = e.pageY;
+      rickrolled.style.top = (y) + 'px';
+      rickrolled.style.left = (x) + 'px';
+      console.log('hij doet het')
+};
+
+let audio2 = document.querySelector('audio[data-key="82"]');
+
+console.log(audio2)
+function hoveredFlow() {
+  rickrolled.classList.toggle('visibility');
+  console.log('hi')
+}
+
+function playSound(e){
+  if (e.keyCode === 82) { // 82 is de r key
+    console.log('r') 
+	}
+
+  const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
+  // const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+
+  if(!audio) return; //stop the function from running all toghether
+  audio.currentTime = 0; //rewind to the start
+  audio.play();
 
 
+  rickrolled.classList.toggle('visibility');
+};
 
+window.addEventListener('keydown', playSound); 
