@@ -146,3 +146,9 @@ a:nth-of-type(12) {
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+  .kleur {
+    background-color: var(--highlight-secondary);
+    color: var(--secondary);
+    border-color: var(--highlight-secondary);
+  }

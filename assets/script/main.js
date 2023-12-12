@@ -165,6 +165,8 @@ flow.addEventListener("mousemove", hoveredFlow, false);
 window.onmousemove = function (e) { // voor het volgen van de muis op de pagina
   var x = e.pageX,
       y = e.pageY;
+      sprint5.style.top = (y) + 'px';
+      sprint5.style.left = (x) + 'px';
       rickrolled.style.top = (y) + 'px';
       rickrolled.style.left = (x) + 'px';
       console.log('hij doet het')
@@ -195,3 +197,23 @@ function playSound(e){
 };
 
 window.addEventListener('keydown', playSound); 
+
+// LONGPRESSED
+
+let user = document.querySelector('a:nth-of-type(9)')
+
+user.addEventListener('mousedown', lange)
+
+function lange(e){
+
+  this.timer = window.setTimeout(kleur,4000,this);
+  e.preventDefault();
+  console.log('lange')
+}
+
+function kleur(){
+  user.classList.toggle('kleur')
+}
+
+// 
+
