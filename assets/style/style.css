@@ -109,7 +109,16 @@ a:nth-of-type(12) {
   }
 }
 
-
 .absolute {
   position: absolute;
+}
+
+
+
+.blur {
+  filter: blur(50px);
+  transition: all 1s ease-in;
+  rotate: 10turn;
+  scale: 0;
+  background-color: var(--primary);
 }

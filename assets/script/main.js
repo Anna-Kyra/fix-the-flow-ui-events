@@ -126,3 +126,13 @@ function keydown(event){
     console.log('88')
 	}
 }
+
+// DOUBLE CLICK
+let fix = document.querySelector('a:nth-of-type(6)')
+fix.addEventListener("dblclick", dblclick, false);
+
+function dblclick(){
+  console.log('geklikt dubbel')
+  this.classList.add('blur')
+}
+
