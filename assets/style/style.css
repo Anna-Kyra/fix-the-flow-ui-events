@@ -152,3 +152,14 @@ a:nth-of-type(12) {
     color: var(--secondary);
     border-color: var(--highlight-secondary);
   }
+
+  .absolute-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: var(--highlight-secondary);
+    color: var(--secondary);
+    border-color: var(--highlight-secondary);
+  }

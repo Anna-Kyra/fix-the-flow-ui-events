@@ -48,7 +48,6 @@ function groter() {
 
 
 //MOUSEOVER
-
 let and = document.querySelector('a:nth-of-type(3)')
 
 and.addEventListener("mouseover", hovered, false);
@@ -158,9 +157,7 @@ function blurThe(){
 let flow = document.querySelector('a:nth-of-type(8)')
 let rickrolled = document.querySelector('.rickrolled')
 
- // wanneer de sprint 5 button is ingeklikt volgd de button de muis
 flow.addEventListener("mousemove", hoveredFlow, false);
-// flow.addEventListener("mouseout", hoveredOutFlow, false);
 
 window.onmousemove = function (e) { // voor het volgen van de muis op de pagina
   var x = e.pageX,
@@ -215,5 +212,18 @@ function kleur(){
   user.classList.toggle('kleur')
 }
 
-// 
+// Datum Click
+let interface = document.querySelector('a:nth-of-type(10)')
 
+interface.addEventListener('click', toBottom)
+
+function toBottom(){
+  this.classList.toggle('absolute-bottom')
+  console.log('ja')
+  // this.innerHTML = Date();
+  if(this.innerHTML === "Interface") {
+    this.innerHTML = Date();
+  } else {
+    this.innerHTML = "Interface";
+  }
+}
