@@ -227,3 +227,12 @@ function toBottom(){
     this.innerHTML = "Interface";
   }
 }
+
+let events = document.querySelector('a:nth-of-type(11)')
+let button = document.querySelector('button')
+
+events.addEventListener('click', disable)
+
+function disable(){
+}
+
